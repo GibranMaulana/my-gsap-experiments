@@ -22,7 +22,7 @@
 }
 
 @theme inline {
-   --font-sans: 'Red Rose', sans-serif;
+   --font-sans: 'Open Sans', sans-serif;
    --font-display: 'Bebas Neue', sans-serif;
 
    --color-text: var(--text);
