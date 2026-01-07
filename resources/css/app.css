@@ -5,10 +5,33 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+:root[data-theme="light"] {
+   --text: hsl(273, 77%, 5%);
+   --background: hsl(271, 81%, 94%);
+   --primary: hsl(276, 79%, 28%);
+   --secondary: hsl(351, 79%, 67%);
+   --accent: hsl(12, 79%, 43%);
 }
+
+:root[data-theme="dark"] {
+   --text: hsl(273, 77%, 95%);
+   --background: hsl(271, 81%, 6%);
+   --primary: hsl(276, 79%, 72%);
+   --secondary: hsl(351, 79%, 33%);
+   --accent: hsl(12, 79%, 57%);
+}
+
+@theme inline {
+   --font-sans: 'Red Rose', sans-serif;
+   --font-display: 'Bebas Neue', sans-serif;
+
+   --color-text: var(--text);
+   --color-background: var(--background);
+   --color-primary: var(--primary);
+   --color-secondary: var(--secondary);
+   --color-accent: var(--accent);
+}
+
 
 [data-barba="container"] {
    position: absolute;

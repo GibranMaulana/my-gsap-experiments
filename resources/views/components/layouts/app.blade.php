@@ -1,7 +1,7 @@
 @props(["namespace" => 'default'])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="dark">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +9,9 @@
       <title>{{ config('app.name', 'Laravel') }}</title>
 
       <!-- Fonts -->
-      <link rel="preconnect" href="https://fonts.bunny.net">
-      <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
 
       <!-- Styles / Scripts -->
       @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -21,7 +22,7 @@
          </style>
       @endif
    </head>
-   <body class="antialiased bg-black text-white">
+   <body  class="antialiased bg-primary text-text font-sans">
 
       <div class="cursor-dot"></div>
   
@@ -29,7 +30,7 @@
           
          <div class="curtain-overlay fixed bottom-0 left-0 min-h-screen translate-y-full w-full text-9xl bg-white z-10 overflow-hidden">
             @for ($i = 0; $i < 8; $i++)
-            <div class="marquee-row flex whitespace-nowrap overflow-hidden leading-none {{ $i % 2 == 0 ? 'marquee-left' : 'marquee-right' }}">
+            <div class="marquee-row flex whitespace-nowrap overflow-hidden leading-none font-display {{ $i % 2 == 0 ? 'marquee-left' : 'marquee-right' }}">
             
                   <h1 class="text-9xl text-black font-bold uppercase shrink-0 px-4">
                      REDIRECTING &nbsp; REDIRECTING &nbsp; REDIRECTING &nbsp; REDIRECTING
@@ -45,7 +46,7 @@
           <main 
               data-barba="container" 
               data-barba-namespace="{{ $namespace }}"
-              class="relative z-10 bg-black"
+              class="relative z-10 bg-background"
           >
               {{ $slot }} 
               
