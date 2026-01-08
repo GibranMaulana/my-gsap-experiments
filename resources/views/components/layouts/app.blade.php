@@ -11,7 +11,7 @@
       <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
       <!-- Styles / Scripts -->
       @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -22,25 +22,15 @@
          </style>
       @endif
    </head>
-   <body  class="antialiased bg-primary text-text font-sans">
+   <body  class="antialiased bg-background text-text font-sans">
 
       <div class="cursor-dot"></div>
   
       <div id="app-wrapper" data-barba="wrapper" class="relative min-h-screen">
           
-         <div class="curtain-overlay fixed bottom-0 left-0 min-h-screen translate-y-full w-full text-9xl bg-white z-10 overflow-hidden">
-            @for ($i = 0; $i < 8; $i++)
-            <div class="marquee-row flex whitespace-nowrap overflow-hidden leading-none font-display {{ $i % 2 == 0 ? 'marquee-left' : 'marquee-right' }}">
-            
-                  <h1 class="text-9xl text-black font-bold uppercase shrink-0 px-4">
-                     REDIRECTING &nbsp; REDIRECTING &nbsp; REDIRECTING &nbsp; REDIRECTING
-                  </h1>
-
-                  <h1 class="text-9xl text-black font-bold uppercase shrink-0 px-4">
-                     REDIRECTING &nbsp; REDIRECTING &nbsp; REDIRECTING &nbsp; REDIRECTING
-                  </h1>
-
-            </div>
+         <div class="curtain-overlay fixed bottom-0 left-0 min-h-screen translate-y-full w-full text-9xl bg-primary z-10 overflow-hidden">
+            @for ($i = 0; $i < 6; $i++)
+               <x-marquee text="REDIRECTING REDIRECTING REDIRECTING" />
             @endfor
          </div>
           <main 
@@ -48,6 +38,7 @@
               data-barba-namespace="{{ $namespace }}"
               class="relative z-10 bg-background"
           >
+          <x-header />
               {{ $slot }} 
               
           </main>

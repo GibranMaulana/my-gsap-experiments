@@ -1,3 +1,4 @@
+import { marqueinit } from "../animations/Marquee";
 import RevealText from "../animations/RevealText";
 
 let instances = [];

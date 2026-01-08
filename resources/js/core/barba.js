@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import homeView from '../pages/home';
 import aboutView from '../pages/about';
 import { MarqueEffect } from '../animations/MarqueEffect';
+import { marqueinit } from '../animations/Marquee';
 
 export function initBarba(animator) {
     
@@ -14,10 +15,11 @@ export function initBarba(animator) {
 
       transitions: [{
             name: 'default',
-            
+            once(data) {
+               marqueinit()
+            },
+
             leave(data) {
-               MarqueEffect();
-               
                let tl = gsap.timeline();
 
                tl
@@ -60,9 +62,8 @@ export function initBarba(animator) {
                return tl;
             },
             after(data) {
-               
+               marqueinit()
                animator.refresh();
-               
             }
          },
       ]

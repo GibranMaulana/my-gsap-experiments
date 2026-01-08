@@ -1,4 +1,5 @@
 <x-layouts.app namespace="home">
+   <x-marquee text="HTTPS://GIBRANMAULANA.ME"/>
    <section class="relative min-h-screen flex flex-col justify-center p-10">
       <div class="flex flex-col">
 

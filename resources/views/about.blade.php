@@ -1,9 +1,9 @@
 <x-layouts.app namespace="other">
-   <div class="bg-white marquee-row flex whitespace-nowrap overflow-hidden leading-none marquee-left">
-      <h1 class="text-9xl text-black font-bold uppercase shrink-0 px-4">
+   <div class="bg-secondary marquee-row flex whitespace-nowrap overflow-hidden leading-none marquee-left">
+      <h1 class="text-9xl text-primary font-bold uppercase shrink-0 px-4">
          ABOUT ABOUT ABOUT ABOUT ABOUT
       </h1>
-      <h1 class="text-9xl text-black font-bold uppercase shrink-0 px-4">
+      <h1 class="text-9xl text-primary font-bold uppercase shrink-0 px-4">
          ABOUT ABOUT ABOUT ABOUT ABOUT
       </h1>
    </div>

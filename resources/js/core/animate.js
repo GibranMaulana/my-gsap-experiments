@@ -1,6 +1,7 @@
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { marqueinit } from "../animations/Marquee";
 
 export class AnimationManager {
    constructor() {
